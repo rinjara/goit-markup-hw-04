@@ -3,7 +3,8 @@
   --secondary-text-color: #757575;
   --accent-color: #2196f3;
   --main-white: #ffffff;
-  --secondary-bg-color: #2f303a;
+  --dark-bg-color: #2f303a;
+  --light-bg-color: #f5f4fa;
 }
 
 body {
@@ -51,8 +52,11 @@ body {
 
   list-style: none;
 }
-.link {
+.link,
+.link:visited {
   text-decoration: none;
+  color: inherit;
+  font-family: inherit;
 }
 .nav {
   display: flex;
@@ -100,6 +104,15 @@ body {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
+}
+.contacts .item > a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-icon {
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 /* hero */
@@ -194,6 +207,16 @@ body {
   /* width: 270px; */
   width: calc((100% - 3 * 30px) / 4);
 }
+
+.skill-icon {
+  display: block;
+  background-color: var(--light-bg-color);
+  padding: 25px 100px;
+  border-radius: 4px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
 .skills-list h3 {
   margin-top: 0;
   margin-bottom: 10px;
@@ -239,7 +262,7 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 
-  background-color: #f5f4fa;
+  background-color: var(--light-bg-color);
 }
 .our-team {
   display: flex;
@@ -275,6 +298,34 @@ body {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
+}
+
+/* clients */
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+.client-company {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+}
+
+.client-company:hover,
+.client-company:focus {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 /* Portfolio */
@@ -336,10 +387,15 @@ body {
 .projects-list-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
-.projects-list-item:hover {
+.project {
+  display: block;
+}
+.project:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
+
 .projects-list-item > img {
   display: block;
 }
@@ -373,9 +429,9 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 
-  background-color: var(--secondary-bg-color);
+  background-color: var(--dark-bg-color);
 }
-.white-logo {
+.page-footer .white-logo {
   display: block;
   margin-bottom: 20px;
 
